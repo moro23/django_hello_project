@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    command: python /d4p_Repo/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/d4p_Repo
+
+    ports:
+      - 8000:8000
